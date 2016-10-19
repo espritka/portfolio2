@@ -1,9 +1,84 @@
 $shadow-grey: rgba(0,0,0,.25);
 $grass-green: #00e2ac;
+$light-blue: #00CFFF;
+
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  padding-top: 10px;
+  font-family: "Roboto", Serif;
+  color: white;
+  background: black;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 4px;
+    padding: 0px;
+  }
+  a {
+    color: white;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  &.open {
+    width: 320px !important;
+  }
+}
+.sidebar-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#close-btn {
+  margin-left: 30px;
+  margin-top: 10px;
+  align-self: flex-start;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: .5;
+  }
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+#hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 34px;
+  width: 40px;
+  left: 30px;
+  top: 20px;
+  border-radius: 4px;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+  &:hover {
+    background: $light-blue;
+  }
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
 
 
 .hero {
-  font-family: Roboto, serif;
+  font-family: "Roboto", Serif;
   text-align: center;
   min-height: 800px;
   background-size: cover;
@@ -27,17 +102,19 @@ $grass-green: #00e2ac;
   h1 {
     font-size: 72px;
     line-height: 55px;
+    color: white;
   }
   h5 {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: 700;
+    color: white;
   }
   h1, h5 {
     text-shadow: 0px 5px 5px $shadow-grey;
   }
   .cta {
-    background-color: black;
+    background: black;
     color: white;
     padding: 0px;
     width: 180px;
@@ -47,7 +124,7 @@ $grass-green: #00e2ac;
     border-radius: 4px;
     cursor: pointer;
     &:hover {
-      background-color: #00cfff;
+      background-color: $light-blue;
     }
   }
 }
