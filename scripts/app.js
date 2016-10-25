@@ -53,4 +53,5 @@ function loadImage(conditions) {
   $("#intro").css("background-image", "url(" + imageSRC + ")");
 }
 
+getWeather();
 init();
